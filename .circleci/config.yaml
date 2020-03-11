@@ -1,0 +1,21 @@
+version: 2 # will always be v2 of circle ci
+jobs:
+  build:
+    docker:
+      - image: circleci/node:lts # this will almost always be the case unless the project needs a custom docker file
+    steps:
+      - checkout # step in ci that gets code from GitHub
+      - run: 'echo "We built something"'
+  test:
+    docker:
+      - image: circleci/node:lts
+    steps:
+      - checkout
+      - run: "npm install"
+      - run: "npm run test"
+workflows:
+  version: 2
+  build_and_test:
+    jobs:
+      - test
+      - build
