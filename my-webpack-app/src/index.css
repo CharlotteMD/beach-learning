@@ -1,0 +1,13 @@
+h1 {
+  text-align: center;
+  color: pink;
+  font-family: cursive;
+  font-weight: bold;
+}
+
+p {
+  text-align: center;
+  color: lime;
+  font-weight: bold;
+  font-family: fantasy;
+}
